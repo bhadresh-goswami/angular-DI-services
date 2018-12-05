@@ -1,0 +1,36 @@
+
+
+<ul *ngFor="let a of arr">
+  <li>{{a}}</li>
+</ul>
+<style>
+  .red{
+    background-color: red;
+    color: white;
+  }
+  .main{
+    background-color: black;
+    color: yellow;
+  }
+</style>
+
+<table width="50%" border="1">
+  <tr>
+    <th>
+      Country Name
+    </th>
+    <th>
+      Capital Name
+    </th>
+    <th>
+      Region
+    </th>
+  </tr>
+  <tr *ngFor='let country of countryList' [ngClass]="{'red':country.capital==='','main':country.name==='India'}">
+    <td>{{country.name}}</td>
+    <td>{{country.capital}}</td>
+    <td>{{country.region}}</td>
+  </tr>
+</table>
+
+<router-outlet></router-outlet>
